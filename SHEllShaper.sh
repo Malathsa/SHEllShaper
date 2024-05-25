@@ -21,7 +21,7 @@ echo -e -n " 1.I want to make a Directory \n 2.I want to make a File \n 3.I want
          dirChoice=1
          while [ $dirChoice != 3 ]
          do
-            echo -e -n " 1.List it content \n 2.Create a file in it \n 3.Exit\nEnter your choice NUMBER please: "
+            echo -e -n " 1.List it content \n 2.Create a file in it \n 3.Exit\nEnter your choice NUMBER please: " 
             read dirChoice
             echo "Sure! on it..."
             if [ "$choice" != "3" ]; then
@@ -129,7 +129,16 @@ echo -e -n " 1.I want to make a Directory \n 2.I want to make a File \n 3.I want
                         chmod "$permissions" $fileName
                         echo "File permissions set successfully."
                         echo -e "It is done! ! \n------------------------ \nanything else?";;
-            *) echo -n -e "Sorry but this is not on our list! would you enter again: \n" ;;
+                    *) echo -e -n "Sorry but this is not on our list! would you enter again: \n";;
+                    esac
+               
+                    fi
+            done
+        else 
+            echo "File not found"
+        fi
+        ;;
+        *) echo -n -e "Sorry but this is not on our list! would you enter again: \n" ;;
          esac
       fi
 done 
