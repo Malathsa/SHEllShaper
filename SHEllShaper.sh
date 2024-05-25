@@ -129,7 +129,7 @@ echo -e -n " 1.I want to make a Directory \n 2.I want to make a File \n 3.I want
                         chmod "$permissions" $fileName
                         echo "File permissions set successfully."
                         echo -e "It is done! ! \n------------------------ \nanything else?";;
-         *) echo -n -e "Sorry but this is not on our list! would you enter again: \n" ;;
-          esac
-       fi
-done
+            *) echo -n -e "Sorry but this is not on our list! would you enter again: \n" ;;
+         esac
+      fi
+done 
